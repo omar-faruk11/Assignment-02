@@ -7,11 +7,12 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+    color: rgba(58, 58, 58, 1);
+    /* box-sizing: border-box; */
 }
 .container{
     margin-left: 120px;
-    color: rgba(58, 58, 58, 1);
+    
 }
 .start-journey{
     display: grid;
@@ -56,7 +57,7 @@ body{
 }
 .collection-title{
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 30px;
 }
 .collection-items{
@@ -78,4 +79,48 @@ body{
     font-size: 16px;
     color: #FB8200;
     margin-bottom: 10px;
+}
+.item-rating span{
+    color: #787885;
+}
+.item-info p{
+    color: #787885;
+}
+.see-more{
+    color: rgba(224, 44, 109, 0.87);
+    font-size: 16px;
+    text-align: end;
+    margin-top: 50px;
+}
+
+footer{
+   
+    background-color: #0A0826;
+
+}
+.footer-area{
+     height: 240px;
+    width: auto;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer-area h3{
+    font-size: 24px;
+    color: white;
+}
+.footer-area p{
+    font-size: 14px;
+    color: #D9DBE1;
+    text-align: justify;
+}
+.social{
+    background-color: rgb(44, 37, 37);
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: white;
+    margin-top: 15px;
 }
