@@ -8,11 +8,53 @@
 body{
     font-family: 'Poppins', sans-serif;
     color: rgba(58, 58, 58, 1);
-    /* box-sizing: border-box; */
+    
 }
+/* navication start */
+.navication{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     margin: 20px 100px ;
+   
+}
+.fa-bars{
+    display: none;
+}
+.navication a h2{
+    font-size: 20px;
+}
+.meno{
+    display: flex;
+    align-items: center;
+}
+.meno ul,li{
+    display: flex;
+    list-style: none;
+}
+.meno ul,li,a{
+    font-size: 16px;
+    text-decoration: none;
+    color: rgba(58, 58, 58, 1);
+    padding: 10px 14px;
+    
+}
+.icon{
+    margin-right:14px;
+    padding: 10px 15px;
+} 
+/* navication end  */
+
+/* start journey */
 .container{
     margin-left: 120px;
-    
+    transition: all .2s ease-in-out;
+    transition-duration:1s;
+    transform: translateY(-4px);
+}
+.container:hover{
+    transform: translatex(4px);
+    transition-duration: .5s;
 }
 .start-journey{
     display: grid;
@@ -46,12 +88,16 @@ body{
     margin-left: 5px;
 }
 .start-journey-image{
+    background-image: url(images/picures/Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+/* start journey end */
 
-
+/* popular collection start */
 .collection-area{
     margin: 100px 160px;
 }
@@ -92,7 +138,48 @@ body{
     text-align: end;
     margin-top: 50px;
 }
+/* popular collection end */
 
+/* buyer review start */
+.review-area{
+    background-color: rgba(248, 253, 255, 0.76);
+}
+.buyer-reviews{
+     margin: 0px 100px 100px 100px;
+}
+.buyer-reviews h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.buyers{
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    grid-column-gap: 20px;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.review img{
+    width: 80px;
+    border: rgb(255, 255, 255) solid 20px;
+    border-radius: 50%;
+    position: relative;
+    top: 40px;
+}
+.review-text{
+    background-color: rgba(255, 255, 255, 0.76);
+    border-radius: 25px;
+    padding: 40px 10px 10px 10px;
+    text-align: center;
+    box-shadow: 0px 0px 40px rgba(105, 105, 105, 0.15) ;
+}
+/* buyer review end */
+
+/* footer start  */
 footer{
    
     background-color: #0A0826;
@@ -109,7 +196,9 @@ footer{
 }
 .footer-area h3{
     font-size: 24px;
-    color: white;
+    color: #f7f7f7;
+    margin-bottom: 10px;
+    
 }
 .footer-area p{
     font-size: 14px;
@@ -123,4 +212,115 @@ footer{
     font-size: 15px;
     color: white;
     margin-top: 15px;
+    margin-right: 10px;
 }
+ /* footer end  */
+
+ /*----------------
+  media queries 
+  ----------------*/
+
+/* tablet devices */
+
+
+@media only screen and (min-width:688px) and (max-width:992px){
+    .meno ul{
+        display: none;
+    }
+    .icon{
+        display: none;
+    }
+    .navication{
+        margin: 20px 40px;
+    }
+    .fa-bars{
+        display: block;
+    }
+    
+    .container{
+        margin-left: 50px;
+    }
+    .start-journey-text h1{
+        font-size: 30px;
+    }
+    .start-journey-image{
+       height: 300px;
+       background-size: 300px;
+    }
+    .collection-items,.buyers{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .buyer-reviews{
+        margin: 0px 20px 100px 20px;
+    }
+}
+
+
+/* mobile devices */
+
+@media only screen and (max-width:688px){
+    .meno ul{
+        display: none;
+    }
+    .icon{
+        display: none;
+    }
+    .navication a h2{
+        font-size: 10px;
+    }
+    .navication{
+        margin: 20px 40px;
+    }
+    .container{
+        margin-left: 20px;
+        transform: none;
+        transition: none;
+        height: fit-content;
+    }
+    .fa-bars{
+        display: block;
+    }
+    .start-journey-text{
+        padding-right:20px;
+    }
+    .start-journey-text h1{
+        font-size: 25px;
+    }
+    .start-journey-text p{
+        text-align: justify;
+    }
+    .start-journey{
+        grid-template-columns: 1fr
+        
+    }
+    .start-journey-image{
+        height: 250px;
+         order: -1;
+         background-size: 250px;
+       
+    }
+    .collection-title{
+        font-size: 20px;
+    }
+    .start-journey-text button{
+        position: relative;
+        left: 25%;
+
+    }
+
+    .collection-items,.buyers{
+        grid-template-columns: 1fr;
+    }
+    /* .see-more {
+        position: relative;
+        
+    } */
+    .buyer-reviews{
+        margin: 0px 10px 100px 10px;
+    }
+
+}
+
+/*---------------
+----The End------
+-----------------*/
